@@ -4,16 +4,17 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Hello Shiny!"),
+  titlePanel("The Central Limit Theorem"),
   
   # Sidebar with a slider input for the number of bins
   sidebarLayout(
     sidebarPanel(
-      sliderInput("bins",
-                  "Number of bins:",
+      sliderInput("nosim",
+                  "Number of Simulations to take:",
                   min = 1,
-                  max = 50,
-                  value = 30)
+                  max = 500,
+                  value = 5,
+                  step = 5)
     ),
     
     # Show a plot of the generated distribution
