@@ -12,6 +12,7 @@ shinyServer(function(input, output) {
   #  2) Its output type is a plot
   
   output$distPlot <- renderPlot({
+    set.seed(3847)
     nosim <- input$nosim
     size <- 10
     cfunc <- function(x, n) 2 * sqrt(n) * (mean(x) - 0.5) 
